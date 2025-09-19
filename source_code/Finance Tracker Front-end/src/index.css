@@ -1,0 +1,155 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Personal Finance Tracker Design System
+All colors MUST be HSL. Financial theme with trustworthy blues and success greens.
+*/
+
+@layer base {
+  :root {
+    --background: 240 10% 98%;
+    --foreground: 240 10% 8%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 8%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 8%;
+
+    /* Financial primary - trustworthy blue */
+    --primary: 217 91% 48%;
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 217 91% 85%;
+
+    /* Financial success - money green */
+    --financial-success: 142 76% 36%;
+    --financial-success-foreground: 0 0% 100%;
+    --financial-success-light: 142 76% 85%;
+
+    /* Financial warning - attention amber */
+    --financial-warning: 43 96% 56%;
+    --financial-warning-foreground: 240 10% 8%;
+    --financial-warning-light: 43 96% 85%;
+
+    /* Financial danger - expense red */
+    --financial-danger: 0 84% 60%;
+    --financial-danger-foreground: 0 0% 100%;
+    --financial-danger-light: 0 84% 85%;
+
+    --secondary: 240 5% 96%;
+    --secondary-foreground: 240 10% 8%;
+
+    --muted: 240 5% 96%;
+    --muted-foreground: 240 4% 46%;
+
+    --accent: 240 5% 96%;
+    --accent-foreground: 240 10% 8%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 240 6% 90%;
+    --input: 240 6% 90%;
+    --ring: 217 91% 48%;
+
+    /* Financial gradients */
+    --gradient-financial-primary: linear-gradient(135deg, hsl(217 91% 48%), hsl(217 91% 60%));
+    --gradient-financial-success: linear-gradient(135deg, hsl(142 76% 36%), hsl(142 76% 48%));
+    --gradient-dashboard: linear-gradient(135deg, hsl(240 10% 98%), hsl(240 15% 95%));
+    --gradient-card: linear-gradient(135deg, hsl(0 0% 100%), hsl(240 5% 98%));
+
+    /* Financial shadows */
+    --shadow-financial: 0 4px 6px -1px hsl(217 91% 48% / 0.1), 0 2px 4px -1px hsl(217 91% 48% / 0.06);
+    --shadow-success: 0 4px 6px -1px hsl(142 76% 36% / 0.1), 0 2px 4px -1px hsl(142 76% 36% / 0.06);
+    --shadow-card: 0 1px 3px 0 hsl(240 10% 8% / 0.1), 0 1px 2px 0 hsl(240 10% 8% / 0.06);
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 240 10% 8%;
+    --foreground: 240 10% 98%;
+
+    --card: 240 10% 10%;
+    --card-foreground: 240 10% 98%;
+
+    --popover: 240 10% 10%;
+    --popover-foreground: 240 10% 98%;
+
+    /* Financial primary - trustworthy blue */
+    --primary: 217 91% 60%;
+    --primary-foreground: 240 10% 8%;
+    --primary-light: 217 91% 85%;
+
+    /* Financial success - money green */
+    --financial-success: 142 76% 48%;
+    --financial-success-foreground: 240 10% 8%;
+    --financial-success-light: 142 76% 85%;
+
+    /* Financial warning - attention amber */
+    --financial-warning: 43 96% 68%;
+    --financial-warning-foreground: 240 10% 8%;
+    --financial-warning-light: 43 96% 85%;
+
+    /* Financial danger - expense red */
+    --financial-danger: 0 84% 70%;
+    --financial-danger-foreground: 240 10% 8%;
+    --financial-danger-light: 0 84% 85%;
+
+    --secondary: 240 4% 16%;
+    --secondary-foreground: 240 10% 98%;
+
+    --muted: 240 4% 16%;
+    --muted-foreground: 240 5% 65%;
+
+    --accent: 240 4% 16%;
+    --accent-foreground: 240 10% 98%;
+
+    --destructive: 0 84% 70%;
+    --destructive-foreground: 240 10% 98%;
+
+    --border: 240 4% 16%;
+    --input: 240 4% 16%;
+    --ring: 217 91% 60%;
+
+    /* Financial gradients for dark mode */
+    --gradient-financial-primary: linear-gradient(135deg, hsl(217 91% 60%), hsl(217 91% 70%));
+    --gradient-financial-success: linear-gradient(135deg, hsl(142 76% 48%), hsl(142 76% 58%));
+    --gradient-dashboard: linear-gradient(135deg, hsl(240 10% 8%), hsl(240 15% 10%));
+    --gradient-card: linear-gradient(135deg, hsl(240 10% 10%), hsl(240 5% 12%));
+
+    /* Financial shadows for dark mode */
+    --shadow-financial: 0 4px 6px -1px hsl(217 91% 60% / 0.3), 0 2px 4px -1px hsl(217 91% 60% / 0.2);
+    --shadow-success: 0 4px 6px -1px hsl(142 76% 48% / 0.3), 0 2px 4px -1px hsl(142 76% 48% / 0.2);
+    --shadow-card: 0 1px 3px 0 hsl(240 10% 4% / 0.5), 0 1px 2px 0 hsl(240 10% 4% / 0.3);
+
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
